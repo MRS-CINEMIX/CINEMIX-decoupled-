@@ -47,7 +47,7 @@ $ npm install
 ```bash
 $ node app.js
 ```
-6. Go to your browser and type `http://0.0.0.0:3000/` in the address bar.
+6. Go to your browser and type `http://localhost:3000/` in the address bar.
 7. Congractulations !! thats it .
 
 ### Sources of the datasets 

@@ -1,0 +1,30 @@
+/* Login Page */
+body{
+    background-image: linear-gradient(to bottom right, #e1bee7, #b2ebf2); 
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.btn,.btn-primary{
+    background-image: linear-gradient(to right, #e040fb, #00bcd4);
+    text-align: center;
+    width: 180px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    border-style: solid;
+    overflow: hidden;
+    box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+    font-size: 1.1em;
+    letter-spacing: 0.2em;
+}
+.fil{
+    width: 50%;
+    margin: 0 auto;
+}
+.al{
+    margin: 50px auto;
+}
+.all{
+    margin-top: 30px;
+}
+

@@ -1,0 +1,120 @@
+/* Star Rating */
+
+.cross {
+    padding: 10px;
+    color: linear-gradient(to right, #e040fb, #00bcd4);
+    cursor: pointer;
+    font-size: 23px
+}
+
+.cross i {
+    margin-top: -5px;
+    cursor: pointer
+}
+
+.comment-box {
+    padding: 5px
+}
+
+.comment-area textarea {
+    resize: none;
+    border: 1px solid #ff0000;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ffffff;
+    outline: 0;
+    box-shadow: 0 0 0 1px rgb(255, 0, 0) !important
+}
+
+.send {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000
+}
+
+.send:hover {
+    color: #fff;
+    background-color: #f50202;
+    border-color: #f50202
+}
+
+.rating {
+    display: inline-flex;
+    margin-top: -10px;
+    flex-direction: row-reverse
+}
+
+.rating>input {
+    display: none
+}
+
+.rating>label {
+    position: relative;
+    width: 28px;
+    font-size: 35px;
+    color:#FFD600;
+    cursor: pointer
+}
+
+.rating>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+    opacity: 1 !important
+}
+
+.rating>input:checked~label:before {
+    opacity: 1
+}
+
+.rating:hover>input:checked~label:before {
+    opacity: 0.4
+}
+
+/* Main Info page */
+body{
+    background-image: linear-gradient(to bottom right, #e1bee7, #b2ebf2);
+}
+
+.btn,.btn-primary{
+        background-image: linear-gradient(to right, #e040fb, #00bcd4);
+        text-align: center;
+        width: 150px;
+        border-radius: 10px;
+        /* text-transform: uppercase; */
+        border-style: solid;
+        overflow: hidden;
+        box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+        font-size: 1em;
+        letter-spacing: 0.2em;
+        margin: 10px 10px;
+    }
+button:hover{
+background-image: linear-gradient(to bottom right, blue,red);
+}
+
+a.nav-link:hover{ 
+background-image: linear-gradient(to bottom right, purple, blue); 
+color: yellow !important; 
+border-radius: 0.5em;
+} 
+h2{
+font-weight: 700;
+color: #000851 ;
+background: -webkit-linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent; 
+
+}
+
+.f{
+font-weight: bold;
+}

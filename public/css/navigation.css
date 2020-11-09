@@ -1,0 +1,5 @@
+a.nav-link:hover{ 
+    background-image: linear-gradient(to bottom right, purple, blue); 
+    color: yellow !important; 
+    border-radius: 0.5em;
+} 

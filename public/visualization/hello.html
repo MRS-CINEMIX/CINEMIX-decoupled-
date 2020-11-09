@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<title>Movie Visualization</title>
+	<style>
+
+	body{
+ 	background-image: linear-gradient(to bottom right, #e1bee7, #b2ebf2);
+	font-family: Helvetica, sans-serif;
+	}
+.thumbnail{
+    padding: 0;
+    width: 100%;
+}
+
+a.nav-link:hover{ 
+    background-image: linear-gradient(to bottom right, purple, blue); 
+    color: yellow !important; 
+    border-radius: 0.5em;
+} 
+
+	.btn-group button {
+background-image: linear-gradient(to right, #e040fb, #00bcd4);
+color: white; /* White text */
+padding: 10px 24px; /* Some padding */
+cursor: pointer; /* Pointer/hand icon */
+float: left; /* Float the buttons side by side */
+font-size: 13px;
+font-weight: bolder;
+font-family: Helvetica, sans-serif;
+ border-radius:8px;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+content: "";
+clear: both;
+display: table;
+}
+
+.btn-group button:not(:last-child) {
+border-right: none; /* Prevent double borders */
+}
+
+
+.btn-group button:hover {
+	background: #3494E6;
+	background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
+	background: linear-gradient(to right, #EC6EAD, #3494E6);
+
+}
+
+
+.thumbnail{
+    padding: 0;
+    width: 100%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    /* background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); */
+}
+
+h2{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.jumbotron h1 {
+    /* font-size: 72px; */
+    font-weight: 700;
+    color: #000851 ;
+    /* background: -webkit-linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+  }
+a.nav-link:hover{ 
+    background-color: #000851; 
+    color: white !important; 
+    border-radius: 0.5em;
+} 
+
+.search-box{
+    background:white;
+    height: 40px;
+    border-radius: 40px;
+}
+
+.search-btn{
+    color: #1da1f3;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.search-text{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0 10px;
+    color: #000851;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    /* width: 240px; */
+    max-width: 240px;
+}
+
+	</style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../../home">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/41SVPG363NL.png" alt="CINEMIX" height="32px">
+                <strong>CINE<span style="color:red">MIX</span></strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="../../home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="hello.html">Analytics</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../../review">Recommendations</a>
+                </li>
+              </ul>
+
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">            
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="/login"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+                    </li>
+                </ul>    
+            </div>
+          </nav>
+      </header>
+
+<h2 align="center" style="color:purple; margin : 20px;">Visualization Playground</h2>
+		<div class="btn-group" style="width:100%">
+	  <button onclick="window.location.href = 'Top 20 Rating.html';" style="width:13.5%; border: 2px solid black; ">Top 20 Rated</button>
+	  <button onclick="window.location.href = 'Bottom 20 Rating.html';" style="width:13.5%; margin-left:10px; border: 2px solid black;">Bottom 20 Rated</button>
+	  <button onclick="window.location.href = 'Highest Grossing.html';" style="width:13.5%; margin-left:10px; border: 2px solid black;">Top 20 Grossing</button>
+	  <button onclick="window.location.href = 'Least Grossing.html';" style="width:13.5%; margin-left:10px; border: 2px solid black;">Bottom 20 Grossing</button>
+		<button onclick="window.location.href = 'Highest Budget.html';" style="width:14.27%; margin-left:10px; border: 2px solid black;">20 Highest Budget Movies</button>
+		<button onclick="window.location.href = 'Lowest Budget.html';" style="width:14.1%; margin-left:10px; border: 2px solid black;">20 Lowest Budget Movies</button>
+		<button onclick="window.location.href = 'Most lengthy movies.html';" style="width:13.5%; margin-left:10px; border: 2px solid black;">Top 20 Most Lengthy</button>
+	 </div>
+
+	 <div style=" margin: 40px 300px 30px 300px;"><center><div id="chart" style="width:700px; height:500px; margin:auto;"></div></center></div>
+
+	 <div class="a" style="margin: 44px 475px;">
+     <b style="color:purple; font-size:20px;">Y-values </b> <select class="chart" id="xrange"></select> &nbsp &nbsp  &nbsp
+	 <b style="color:purple; font-size:20px;">X-values </b> <select class="chart" id="yrange"></select>
+     </div>
+
+
+
+
+     <footer style="background-color: #eee !important;" id="sticky-footer" class="py-4 bg-light text-dark-50">
+        <div class="container text-center">
+          <small>Copyright &copy; CINEMAX</small>
+        </div>
+      </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+<!-- <div style="float:right"> <div id="chart2" style="width:600px; height:500px;"> </div>
+ <ul>
+    <li> Y-Axis <select class="chart2" id="range2"></select></li>
+    <li> X-Axis <select class="chart2" id="domain2"></select> </li>
+    <li> Color <select class="chart2" id="color2"></select> </li>
+    <li> Size <select class="chart2" id="size2"></select> </li> </ul>
+</div>
+ -->
+<script src="https://www.google.com/jsapi"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="jquery.csv-0.71.js"></script>
+<script>
+
+    // load the visualization library from Google and set a listener
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+        // grab the CSV
+        thecsvfile = "MI.csv"
+
+        $.get(thecsvfile, function(csvString) {
+
+            // transform the CSV string into a 2-dimensional array
+            var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+
+            // use arrayData to load the select elements with the appropriate options
+            for (var i = 0; i < arrayData[0].length; i++) {
+                //* this adds the given option to both select elements
+                 $("select").append("<option value='" + i + "'>" + arrayData[0][i] + "</option");
+            }
+
+            // set the default selection
+            $("#xrange option[value='1']").attr("selected","selected");
+            $("#yrange option[value='0']").attr("selected","selected");
+            $("domain option[value='3']").attr("selected","selected");
+
+                    // this new DataTable object holds all the data
+            var data = new google.visualization.arrayToDataTable(arrayData);
+
+            // this view can select a subset of the data at a time
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0,1]);
+
+
+            var options = {
+                title: "Movie Details",
+                hAxis: {title: data.getColumnLabel(0), minValue: data.getColumnRange(0).min, maxValue: data.getColumnRange(0).max},
+                vAxis: {title: data.getColumnLabel(1), minValue: data.getColumnRange(1).min, maxValue: data.getColumnRange(1).max},
+                legend: 'none'
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart'));
+            chart.draw(view, options);
+
+
+            // set listener for the update button
+            $("select").click(function(){
+
+               // determine selected domain and range
+                var xrange = +$("#xrange option:selected").val();
+                var yrange = +$("#yrange option:selected").val();
+                var domain = +$("#domain option:selected").val();
+
+
+                // update the view
+                view.setColumns([yrange,xrange]);
+
+                // update the options
+                options.hAxis.title = data.getColumnLabel(yrange);
+                options.hAxis.minValue = data.getColumnRange(xrange).min;
+                options.hAxis.maxValue = data.getColumnRange(xrange).max;
+                options.vAxis.title = data.getColumnLabel(xrange);
+                options.vAxis.minValue = data.getColumnRange(yrange).min;
+                options.vAxis.maxValue = data.getColumnRange(yrange).max;
+
+
+                chart.draw(view, options);
+
+            });
+
+        });
+
+
+
+    }
+</script>
+</body>
+</html>

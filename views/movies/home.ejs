@@ -1,0 +1,51 @@
+<%- include('../partials/header')  -%>
+
+<link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/home.css">
+
+<body>
+
+    <%- include('../partials/navigation')  -%>
+
+    <div class="b1">
+        <h1 class="display-4">CINE<span class="a2">MIX</span></h1>
+        <form method="POST" action="/results">
+            <div id="se" class="form-group shadow-textarea" style="text-align: center;color: white;">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <center>
+                    <input type="text" name="search" class="form-control" id="autoComplete" autocomplete="On"
+                        placeholder="Enter the Movie Name / Genre"
+                        style="background-color: #ffffff;border-color:red;border-radius:50px;width: 75%;color: black;"
+                        required="required">
+                </center>
+                <ul id="food_list"></ul>
+            </div>
+
+            <div class="form-group" style="text-align: center; margin-top: 40px;">
+                <center>
+                    <input type="submit" class="btn btn-primary btn-block movie-button" value="Search"
+                        style="background-color: #a52a2a;text-align: center;border-color: #a52a2a;width:120px;">
+                </center>
+                <br><br>
+            </div>
+        </form>
+    </div>
+    <footer style="background-color: #eee !important; margin-bottom:30px ; margin-top: 85%;" id="sticky-footer"
+        class="py-4 bg-light text-dark-50">
+        <div class="container text-center">
+            <small>Copyright &copy; CINEMAX</small>
+        </div>
+    </footer>
+
+    <script src="/js/home.js"></script>
+
+    <%- include('../partials/footer')  -%>

@@ -1,0 +1,38 @@
+<%- include('partials/header')  -%>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/auth.css">
+<link rel="stylesheet" href="/css/navigation.css">
+
+</head>
+
+<body>
+
+    <%- include('partials/navigation')  -%>
+
+    <div class="container">
+        <form method="POST" action="/login">
+            <fieldset class="form-group al">
+                <legend style="text-align: center; font-size: 40px; font-weight: bold;">Login to your Account</legend>
+                <div class="form-group fil all">
+                    <label for="username">Username</label>
+                    <input type="username" class="form-control" id="username" name="username">
+                </div>
+                <div class="form-group fil all">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+            </fieldset>
+
+            <div class="form-group" style="margin-left: 43%;">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </form>
+        <div style="margin-left: 30px; color: black; text-align: center;">
+            Create a account? <a href="/register">Sign Up</a>
+        </div>
+
+        <%- include('partials/footer')  -%>

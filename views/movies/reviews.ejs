@@ -1,0 +1,58 @@
+<%- include('../partials/header')  -%>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/reviews.css">
+
+</head><body>
+
+    <%- include('../partials/navigation')  -%>
+      
+    <center>
+        <div class="container" style="background-image: linear-gradient(to top, #ffffff, #dddddd); overflow: hidden; padding: 40px; margin: 50px; ">
+        
+            <% if(reviews){ %>
+                <h2 ><%= reviews.imdbid %></h2>
+                <h4 >USER REVIEWS</h4>
+            
+             <div class="col-md-12" style="margin: 0 auto; margin-top:25px;">
+                <table class="table table-bordered" bordercolor="blue" style="color:black">
+                    <thead>
+                        <tr>
+                            <th class="text-center" scope="col" style="width: 15%">User Name</th>
+                            <th class="text-center" scope="col" style="width: 45%">Comments</th>
+                            <th class="text-center" scope="col" style="width: 10%">Rating</th>
+                            <th class="text-center" scope="col">Sentiments</th>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+                      <% reviews.reviews.forEach( review => { %>
+                      <tr style="background-color:#e1bee7;">
+                            <td><%= review.author.username %></td>
+                              <td><%= review.review %></td>
+                               <td><%= review.rating %></td>
+                          <td><center>
+                            <%= review.sentiment %>: 
+                              <% if(review.sentiment == 'Positive Review'){ %>
+                                &#128515;
+                              <% } else { %>
+                                &#128534;
+                              <% } %>
+                            </center>
+                          </td>
+                          </tr>
+                          <% }); %>
+                    </tbody>
+                  </table>
+            </div>
+            <% } else { %>
+                <div>
+                    <p>No Reviews Yet!</p>
+                </div>
+            <% } %>
+        </div>
+        </center>
+
+<%- include('../partials/footer')  -%>

@@ -1,0 +1,76 @@
+.thumbnail {
+  padding: 0;
+  width: 100%;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  /* background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); */
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.jumbotron h1 {
+  /* font-size: 72px; */
+  font-weight: 700;
+  color: #000851;
+  background: -webkit-linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+a.nav-link:hover {
+  background-image: linear-gradient(to bottom right, purple, blue);
+  color: yellow !important;
+  border-radius: 0.5em;
+}
+.fa-search,
+.fa {
+  color: blue;
+}
+.btn,
+.btn-primary,
+.btn-block,
+.movie-button {
+  background-image: linear-gradient(to bottom right, purple, red);
+  color: white;
+  text-align: center;
+  border-color: white;
+  width: 120px;
+  border-radius: 25px;
+  border-style: solid;
+}
+.search-box {
+  background: white;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.search-btn {
+  color: #1da1f3;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.search-text {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0 10px;
+  color: #000851;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  /* width: 240px; */
+  max-width: 240px;
+}

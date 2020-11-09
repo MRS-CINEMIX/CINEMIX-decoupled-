@@ -1,0 +1,35 @@
+body {
+  background-image: linear-gradient(to bottom right, #acb6e5, #86fde8);
+}
+
+.btn,
+.btn-primary,
+.btn-block,
+.movie-button {
+  background-image: linear-gradient(to bottom right, purple, red);
+  color: white;
+  text-align: center;
+  border-color: white;
+  width: 120px;
+  border-radius: 25px;
+  border-style: solid;
+}
+
+a.nav-link:hover {
+  background-image: linear-gradient(to bottom right, purple, blue);
+  color: yellow !important;
+  border-radius: 0.5em;
+}
+.thumbnail {
+  padding: 0;
+  width: 100%;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  /* background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); */
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}

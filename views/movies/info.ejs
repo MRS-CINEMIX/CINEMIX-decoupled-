@@ -1,0 +1,80 @@
+<%- include('../partials/header')  -%>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/info.css">
+</head>
+
+<body>
+
+    <%- include('../partials/navigation')  -%>
+
+    <center>
+        <div class="container" style="background-image: linear-gradient(to top, #ffffff, #dddddd); overflow: hidden; padding: 40px; margin: 50px; ">
+
+            <span><img src="<%= movieData.Poster %>" align="left" HSPACE="50" VSPACE="50" alt="Poster"><br><strong>
+                    <h2><%= movieData.Title %></h2>
+                </strong> </span>
+            <br>
+            <p>
+                <strong>Movie Description:</strong>
+                <div><%= movieData.Plot %></div>
+            </p>
+            <p>
+                <div><strong>Ratings:</strong><%= movieData.Ratings[0].Value %></div>
+                <div><strong>Director:</strong><%= movieData.Director %></div>
+                <div><strong>Writer:</strong><%= movieData.Writer %></div>
+                <div><strong>Actors:</strong><%= movieData.Actors %></div>
+            </p>
+
+            <div class="formwrapper">
+                <h2 class="title" style="color: black !important; font-size: 25px;">Reviews</h2>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#form">Give
+                    Review</button>
+                <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="text-right cross">
+                                <i class="fa fa-times mr-2"></i> 
+                            </div>
+                            <div class="card-body text-center"> 
+                                <img src=" https://i.imgur.com/d2dKtI7.png" alt="review-logo" height="100" width="100">
+                                <div class="comment-box text-center">
+                                    <form action="/info/<%= movieData.imdbID %>" method="POST">
+                                        <h4>Add a comment</h4>
+                                        <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label
+                                                for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label
+                                                for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label
+                                                for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label
+                                                for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label
+                                                for="1">☆</label> </div>
+                                        <div class="comment-area"> 
+                                            <textarea class="form-control" name="review" placeholder="what is your view?" rows="4"></textarea> 
+                                        </div>
+                                        <div class="text-center mt-4"> 
+                                            <button class="btn btn-success send px-5">
+                                                Submit <i class="fa fa-long-arrow-right ml-1"></i>
+                                            </button> 
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/reviews/<%= movieData.imdbID %>" class="btn btn-primary">Check Reviews</a>
+            </div>
+        </div>
+    </center>
+
+    <footer style="background-color: #eee !important; bottom: 0 !important;" id="sticky-footer"
+        class="py-4 bg-light text-dark-50">
+        <div class="container text-center">
+            <small>Copyright &copy; CINEMIX</small>
+        </div>
+    </footer>
+
+    <%- include('../partials/footer')  -%>

@@ -1,0 +1,37 @@
+<%- include('../partials/header')  -%>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/results.css">
+
+</head>
+<body>
+
+<%- include('../partials/navigation')  -%>
+
+<section class="container">
+	<h2 style="margin:20px;"><i class="fa fa-film" aria-hidden="true"></i> Search results</h2>
+	<div class="container">
+        <div class="row">
+        <% moviesData.Search.forEach(movie => { %>
+            <div class="col-lg-3 col-md-4 col-sm-6 ">
+                <div class="card shadow" style="text-align: center; margin-bottom: 30px;">
+                    <img src="<%= movie.Poster %>" alt="Movie Poster" style="width: 243px; height: 420px;">
+                    <div class="card-body">
+                        <a class="btn btn-primary" href="/info/<%= movie.imdbID %>">Give review</a>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+        </div>
+    </div>
+</section>
+
+<footer style="background-color: #eee !important; width: 100%" id="sticky-footer" class="py-4 bg-light text-dark-50" >
+    <div class="container text-center">
+        <small>Copyright &copy; CINEMIX</small>
+    </div>
+</footer>
+
+<%- include('../partials/footer')  -%>

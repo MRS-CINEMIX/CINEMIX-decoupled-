@@ -1,0 +1,46 @@
+body{
+    background-image: linear-gradient( to top left,   #b2ebf2,#e1bee7, #b2ebf2);
+}
+
+.btn,
+.btn-primary {
+  background-image: linear-gradient(to right, #e040fb, #00bcd4);
+  text-align: center;
+  width: 150px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  border-style: solid;
+  overflow: hidden;
+  box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+  font-size: 1.1em;
+  letter-spacing: 0.2em;
+}
+button:hover {
+  background-image: linear-gradient(to bottom right, blue, red);
+}
+
+a.nav-link:hover {
+  background-image: linear-gradient(to bottom right, purple, blue);
+  color: yellow !important;
+  border-radius: 0.5em;
+}
+h2 {
+  font-weight: 700;
+  color: #000851;
+  background: -webkit-linear-gradient(90deg, blue 0%, red 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h4 {
+  font-weight: 300;
+  color: #000851;
+  background: -webkit-linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.f {
+  font-weight: bold;
+}

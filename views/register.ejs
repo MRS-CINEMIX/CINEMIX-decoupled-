@@ -1,0 +1,49 @@
+<%- include('partials/header')  -%>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/auth.css">
+<link rel="stylesheet" href="/css/navigation.css">
+
+</head>
+
+<body>
+    <%- include('partials/navigation')  -%>
+
+    <div class="container">
+        <form method="POST" action="/register">
+            <fieldset class="form-group al">
+                <legend style="text-align: center; font-size: 40px; font-weight: bold;">Register Here</legend>
+                <div class="form-group fil all">
+                    <label for="name1">Username</label>
+                    <input class="form-control" type="text" id="name1" name="username">
+                </div>
+                <div class="form-group fil all">
+                    <label for="name2">Fullname</label>
+                    <input class="form-control" type="text" id="name2" name="fullname">
+                </div>
+                <div class="form-group fil all">
+                    <label for="email1">Email address</label>
+                    <input type="email" class="form-control" id="email1" name="email" aria-describedby="emailH">
+                </div>
+                <div class="form-group fil all">
+                    <label for="Pass1">Password</label>
+                    <input type="password" class="form-control" id="Pass1" name="password">
+                </div>
+                <div class="form-group fil all">
+                    <label for="Pass2">Confirm Password</label>
+                    <input type="password" class="form-control" id="Pass2" name="confirmPassword">
+                </div>
+            </fieldset>
+            <div class="form-group" style="margin-left: 43%;">
+                <button type="submit" class="btn btn-primary" target=" ">Register</button>
+            </div>
+        </form>
+        <div style="margin-left: 60px; color: black; text-align: center;">
+            Already have a account! <a href=" ">Sign In</a>
+        </div>
+    </div>
+
+
+    <%- include('partials/footer')  -%>

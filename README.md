@@ -23,6 +23,17 @@ scalable.
 
 ## How to run the project?
 
+### Setup
+
+Add the required data in the `.env` file to access the environment variables in the project
+```
+MONGODBURI=<Your MongoDB URI>
+
+PORT=3000
+
+APIKEY=<Your OMDB API Key>
+```
+
 ### Run Flask server
 
 1. Open the project directory and go into flaskr directory
@@ -39,6 +50,9 @@ $ pip install -r requirements.txt
 ```bash
 $ python app.py
 ```
+
+### Run Nodejs server
+
 4. Now open another terminal in the project directory while keeping the first one running and setup the nodejs server
 ```bash
 $ npm install
@@ -56,13 +70,3 @@ $ node app.js
 2. [The Movies Dataset](https://www.kaggle.com/rounakbanik/the-movies-dataset)
 :: Download movies_metadata.csv and links_small.csv files from the above mentioned links and paste in /Data folder.  
     
-### Setup
-
-Add the required data in the `.env` file to access the environment variables in the project
-```
-MONGODBURI=<Your MongoDB URI>
-
-PORT=3000
-
-APIKEY=<Your OMDB API Key>
-```
